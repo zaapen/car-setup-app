@@ -91,11 +91,10 @@
       <h3>Note</h3>
       <p id="car-note"><%= carSetup.note %></p>
     </section>
-    <section class="group-info">
-      <% if (locals.uid === carSetup.userId) { %>
+    <% if (locals.isAuth && locals.uid === carSetup.userId) { %>
+      <section class="group-info">
         <a class="btn" href="/mysetups/<%= carSetup.id %>/edit">Edit</a>
-        <button class="btn btn-danger">Delete</button>
-      <% } %>
-    </section>
+      </section>
+    <% } %>
   </main>
 <%- include('./shared/includes/footer') %> 

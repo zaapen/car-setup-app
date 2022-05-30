@@ -1,27 +1,18 @@
 const express = require('express');
 
-const Carsetup = require('../models/carSetup.model');
+const baseController = require('../controllers/base.controller');
 
 const router = express.Router();
 
 // Routes
 
 router.get('/', (req, res) => {
-  res.redirect('/allsetup');
+  res.redirect('/allsetups');
 });
 
-router.get('/allsetup', async (req, res, next) => {
-  let carSetups;
+router.get('/allsetups', baseController.getAllPublicSetups);
 
-  try {
-    carSetups = await Carsetup.findAllPublic();
-  } catch (error) {
-    next(error);
-    return;
-  }
-
-  res.render('all-car-setup', { userCarSetups: carSetups });
-})
+router.get('/allsetups/:id', baseController.getPubCarSetup);
 
 router.get('/401', (req, res) => {
   res.status(401).render('./shared/errorView', { errorType: '401' });
