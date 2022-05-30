@@ -1,0 +1,28 @@
+<%- include('./shared/includes/head', { pageTitle: 'My Setups'}) %>
+<link rel="stylesheet" href="./styles/setups.css">
+<script src="./scripts/car-management.js" defer></script>
+</head>
+<body>
+  <%- include('./shared/includes/header') %> 
+  <main>
+    <section id="setup-title">
+      <h1>My Setups</h1>
+      <p>
+        <a href="/mysetups/new" class="btn btn-alt">Add New Setup</a>
+      </p>
+    </section>
+    <section>
+      <% if (!userCarSetups || userCarSetups.length === 0) { %>
+          <h3>There are no setups. Please create add a new setup.</h3>
+        <% } else { %>
+          <ul id="car-grid">
+            <% for( const userCarSetup of userCarSetups ) { %>
+              <li>
+                <%- include('./shared/includes/car-card', { userCarSetup: userCarSetup }) %>
+              </li>
+            <% } %>
+          </ul>
+      <% } %>
+    </section>
+  </main>
+<%- include('./shared/includes/footer') %> 

@@ -1,0 +1,33 @@
+<%- include('./shared/includes/head', { pageTitle: 'My Setups'}) %>
+<link rel="stylesheet" href="/styles/form.css">
+</head>
+<body>
+  <%- include('./shared/includes/header') %> 
+  <main id="new-setup">
+    <h1>New Car Setup</h1>
+    <%- include('./shared/includes/setupForm', { submitPath: '/mysetups/new', carSetup: {
+      title: '',
+      carModel: '',
+      track: '',
+      motor: '',
+      battery: '',
+      tires: '',
+      pinion: '',
+      spur: '',
+      transmission: '',
+      frontSpring: '',
+      frontShockOil: '',
+      frontCamber: '',
+      frontToe: '',
+      frontHeight: '',
+      frontDroop: '',
+      rearSpring: '',
+      rearShockOil: '',
+      rearCamber: '',
+      rearToe: '',
+      rearHeight: '',
+      rearDroop: '',
+      note: '',
+    }, imageRequired: true }) %>
+  </main>
+<%- include('./shared/includes/footer') %> 

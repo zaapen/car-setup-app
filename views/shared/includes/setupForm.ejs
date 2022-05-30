@@ -1,0 +1,114 @@
+<form action="<%= submitPath %>?_csrf=<%= locals.csrfToken %>" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <div>
+      <label for="title">Setup Name</label>
+      <input type="text" id="title" name="title" value="<%= carSetup.title %>" required>
+    </div>
+    <div>
+      <label for="carModel">Car Model</label>
+      <input type="text" id="carModel" name="carModel" value="<%= carSetup.carModel %>" required>
+    </div>
+    <div>
+      <label for="image">Image</label>
+      <input type="file" id="image" name="image" accept="image/png, image/jpg" <% if (imageRequired) { %>required<% } %>>
+    </div>
+    <div>
+      <label for="track">Track name</label>
+      <input type="text" id="track" name="track" value="<%= carSetup.track %>" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <label for="motor">Motor</label>
+      <input type="text" id="motor" name="motor" value="<%= carSetup.motor %>" required>
+    </div>
+    <div>
+      <label for="battery">Battery</label>
+      <input type="text" id="battery" name="battery" value="<%= carSetup.battery %>" required>
+    </div>
+    <div>
+      <label for="tires">Tires</label>
+      <input type="text" id="tires" name="tires" value="<%= carSetup.tires %>" required>
+    </div>
+    <div>
+      <label for="pinion">Pinion Gear</label>
+      <input type="number" id="pinion" name="pinion" value="<%= carSetup.pinion %>" required>
+    </div>
+    <div>
+      <label for="spur">Spur Gear</label>
+      <input type="number" id="spur" name="spur" value="<%= carSetup.spur %>" required>
+    </div>
+    <div>
+      <label for="transmission">Transmission Ratio</label>
+      <input type="number" id="transmission" name="transmission" min="0.00" step="0.01" value="<%= carSetup.transmission %>" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <label for="frontSpring">Front Spring</label>
+      <input type="text" id="frontSpring" name="frontSpring" value="<%= carSetup.frontSpring %>" required>
+    </div>
+    <div>
+      <label for="frontShockOil">Front Shock Oil</label>
+      <input type="number" id="frontShockOil" name="frontShockOil" value="<%= carSetup.frontShockOil %>" required>
+    </div>
+    <div>
+      <label for="frontCamber">Front Camber</label>
+      <input type="number" id="frontCamber" name="frontCamber" min="0.01" step="0.01" value="<%= carSetup.frontCamber %>" required>
+    </div>
+    <div>
+      <label for="frontToe">Front Toe</label>
+      <input type="number" id="frontToe" name="frontToe" min="0.00" step="0.01" value="<%= carSetup.frontToe %>" required>
+    </div>
+    <div>
+      <label for="frontHeight">Front Height</label>
+      <input type="number" id="frontHeight" name="frontHeight" min="0.01" step="0.01" value="<%= carSetup.frontHeight %>" required>
+    </div>
+    <div>
+      <label for="frontDroop">Front Droop</label>
+      <input type="number" id="frontDroop" name="frontDroop" min="0.01" step="0.01" value="<%= carSetup.frontDroop %>" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <label for="rearSpring">RearSpring</label>
+      <input type="text" id="rearSpring" name="rearSpring" value="<%= carSetup.rearSpring %>" required>
+    </div>
+    <div>
+      <label for="rearShockOil">Rear Shock Oil</label>
+      <input type="number" id="rearShockOil" name="rearShockOil" value="<%= carSetup.rearShockOil %>" required>
+    </div>
+    <div>
+      <label for="rearCamber">Rear Camber</label>
+      <input type="number" id="rearCamber" name="rearCamber" min="0.01" step="0.01" value="<%= carSetup.rearCamber %>" required>
+    </div>
+    <div>
+      <label for="rearToe">Rear Toe</label>
+      <input type="number" id="rearToe" name="rearToe" min="0.00" step="0.01" value="<%= carSetup.rearToe %>" required>
+    </div>
+    <div>
+      <label for="rearHeight">Rear Height</label>
+      <input type="number" id="rearHeight" name="rearHeight" min="0.01" step="0.01" value="<%= carSetup.rearHeight %>" required>
+    </div>
+    <div>
+      <label for="rearDroop">Rear Droop</label>
+      <input type="number" id="rearDroop" name="rearDroop" min="0.01" step="0.01" value="<%= carSetup.rearDroop %>" required>
+    </div>
+  </div>
+  <div class="form-group note-group">
+    <div>
+      <label for="note">Notes</label>
+      <textarea name="note" id="note" rows="6" required><%= carSetup.note %></textarea>
+    </div>
+    <div>
+      <input class="radio-input" type="radio" id="private" name="privatePublic" value="private">
+      <label class="radio-label" for="private">Private</label>
+      <input class="radio-input" type="radio" id="public" name="privatePublic" value="public" checked>
+      <label class="radio-label" for="public">Public</label>
+    </div>
+  </div>
+  <div id="form-button-group">
+    <button type="reset" class="btn btn-alt">Reset</button>
+    <button class="btn">Save</button>
+  </div>
+</form>

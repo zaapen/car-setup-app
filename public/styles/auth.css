@@ -1,0 +1,30 @@
+h1 {
+  text-align: center;
+  color: var(--color-gray-200);
+}
+
+form {
+  max-width: 30rem;
+  margin: var(--space-4) auto;
+  padding: var(--space-4);
+  background-color: var(--color-gray-600);
+  border-radius: var(--border-radius-small);
+}
+
+.form-control {
+  margin: var(--space-2) auto;
+  width: 90%;
+}
+
+#submit-btn {
+  margin: var(--space-8) auto var(--space-2) auto;
+  text-align: center;
+}
+
+.form-control a {
+  margin: 0 1rem;
+}
+
+.form-control a:hover, .form-control a:active {
+  color: var(--color-primary-400);
+}

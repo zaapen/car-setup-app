@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+
+  --color-gray-100: rgb(177, 192, 212);
+  --color-gray-200: rgb(133, 155, 184);
+  --color-gray-400: rgb(81, 94, 110);
+  --color-gray-600: rgb(25, 35, 47);
+  --color-gray-700: rgb(24, 27, 31);
+
+  --color-primary-50: rgb(204, 227, 255);
+  --color-primary-100: rgb(166, 205, 252);
+  --color-primary-400: rgb(51, 75, 252);
+  --color-primary-700: rgb(0, 13, 114);
+
+  --color-error-100: rgb(207, 145, 145);
+  --color-error-500: rgb(190, 14, 14);
+  
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  --border-radius-small: 4px;
+  --border-radius-medium: 6px;
+
+  --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-gray-700);
+  color: var(--color-gray-100);
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 5.5rem auto;
+  width: 90%;
+  max-width: 50rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary-100);
+}
+
+.btn {
+  font: inherit;
+  cursor: pointer;
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-primary-100);
+  border: 1px solid var(--color-primary-100);
+  border-radius: var(--border-radius-small);
+  color: var(--color-primary-700);
+}
+
+.btn:hover, .btn:active {
+  background-color: var(--color-primary-700);
+  color: var(--color-primary-100);
+  border-color: var(--color-primary-700);
+}
+
+.btn-alt {
+  background-color: var(--color-gray-700);
+  border-color: var(--color-gray-100);
+  color: var(--color-gray-100);
+}
+
+.btn-alt:hover, .btn-alt:active {
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+}
+
+.btn-danger {
+  background-color: var(--color-error-100);
+  color: var(--color-error-500);
+  border-color: var(--color-error-500);
+}
+
+.btn-danger:hover, .btn-danger:active {
+  background-color: var(--color-error-500);
+  color: white;
+}
+
+.alert {
+  margin: 0 auto;
+  max-width: 30rem;
+  padding: var(--space-4);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-error-100);
+  color: var(--color-error-500);
+  text-align: center;
+}
+
+.alert h2 {
+  font-size: 1rem;
+}

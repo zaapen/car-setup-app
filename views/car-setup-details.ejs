@@ -1,0 +1,101 @@
+<%- include('./shared/includes/head', { pageTitle: 'All Car Setup'}) %>
+<link rel="stylesheet" href="/styles/setupDetails.css">
+</head>
+<body>
+  <%- include('./shared/includes/header') %> 
+  <main id="car-details">
+    <h2><%= carSetup.title %></h2>
+    <img src="<%= carSetup.imageUrl %>" alt="<%= carSetup.carModel %>">
+    <section class="group-info">
+      <h2><%= carSetup.carModel %></h2>
+      <table>
+        <tr>
+          <th>Track</th>
+          <td><%= carSetup.track %></td>
+        </tr>
+        <tr>
+          <th>Motor</th>
+          <td><%= carSetup.motor %></td>
+        </tr>
+        <tr>
+          <th>Battery</th>
+          <td><%= carSetup.battery %></td>
+        </tr>
+        <tr>
+          <th>Tires</th>
+          <td><%= carSetup.tires %></td>
+        </tr>
+        <tr>
+          <th>FDR</th>
+          <td><%= fdr %></td>
+        </tr>
+      </table>
+    </section>
+    <section class="group-info">
+      <table>
+        <tr>
+          <th>Front Spring</th>
+          <td><%= carSetup.frontSpring %></td>
+        </tr>
+        <tr>
+          <th>Front Shock Oil</th>
+          <td><%= carSetup.frontShockOil %></td>
+        </tr>
+        <tr>
+          <th>frontCamber</th>
+          <td><%= carSetup.frontCamber %></td>
+        </tr>
+        <tr>
+          <th>Front Toe</th>
+          <td><%= carSetup.frontToe %></td>
+        </tr>
+        <tr>
+          <th>Front Height</th>
+          <td><%= carSetup.frontHeight %></td>
+        </tr>
+        <tr>
+          <th>Front Droop</th>
+          <td><%= carSetup.frontDroop %></td>
+        </tr>
+      </table>
+    </section>
+    <section class="group-info">
+      <table>
+        <tr>
+          <th>Rear Spring</th>
+          <td><%= carSetup.rearSpring %></td>
+        </tr>
+        <tr>
+          <th>Rear Shock Oil</th>
+          <td><%= carSetup.rearShockOil %></td>
+        </tr>
+        <tr>
+          <th>Rear Camber</th>
+          <td><%= carSetup.rearCamber %></td>
+        </tr>
+        <tr>
+          <th>Rear Toe</th>
+          <td><%= carSetup.rearToe %></td>
+        </tr>
+        <tr>
+          <th>Rear Height</th>
+          <td><%= carSetup.rearHeight %></td>
+        </tr>
+        <tr>
+          <th>Rear Droop</th>
+          <td><%= carSetup.rearDroop %></td>
+        </tr>
+      </table>
+    </section>
+    <section class="group-info">
+      <h3>Note</h3>
+      <p id="car-note"><%= carSetup.note %></p>
+    </section>
+    <section class="group-info">
+      <% if (locals.uid === carSetup.userId) { %>
+        <a class="btn" href="/mysetups/<%= carSetup.id %>/edit">Edit</a>
+        <button class="btn btn-danger">Delete</button>
+      <% } %>
+    </section>
+  </main>
+<%- include('./shared/includes/footer') %> 

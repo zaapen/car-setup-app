@@ -1,0 +1,57 @@
+#new-setup h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-gray-600);
+  border-radius: var(--border-radius-small);
+}
+
+label {
+  display: block;
+  padding: var(--space-2);
+}
+
+input, textarea {
+  font: inherit;
+  width: 100%;
+  padding: var(--space-1);
+  border: none;
+  border-radius: var(--border-radius-small);
+}
+
+textarea {
+  resize: none;
+}
+
+.radio-input {
+  width: 1rem;
+}
+
+.radio-label {
+  display: inline-block;
+}
+
+#form-button-group {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+button {
+  width: 45%;
+  margin: 0 0.25rem;
+}
+
+@media (min-width: 48rem) {
+  .form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .note-group {
+    display: block;
+  }
+}

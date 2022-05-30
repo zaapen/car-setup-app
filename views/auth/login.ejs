@@ -1,0 +1,31 @@
+<%- include('../shared/includes/head', { pageTitle: 'Login'}) %>
+<link rel="stylesheet" href="/styles/auth.css">
+<link rel="stylesheet" href="/styles/form.css">
+</head>
+<body>
+  <%- include('../shared/includes/header') %>
+  <main>
+    <h1>Log in</h1>
+    <% if (inputData.errorMessage) { %>
+      <section class="alert">
+        <h2>Invalid Credential!</h2>
+        <p><%= inputData.errorMessage %></p>
+      </section>
+    <% } %>
+    <form action="/login" method="POST">
+      <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+      <div class="form-control">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div id="submit-btn" class="form-control">
+        <button class="btn">Log in</button>
+        <a href="/signup">Signup instead</a>
+      </div>
+    </form>
+  </main>
+  <%- include('../shared/includes/footer') %>

@@ -1,0 +1,10 @@
+<%- include('./shared/includes/head', { pageTitle: 'Update Car Setups'}) %>
+<link rel="stylesheet" href="/styles/form.css">
+</head>
+<body>
+  <%- include('./shared/includes/header') %> 
+  <main id="new-setup">
+    <h1>Update Car Setup</h1>
+    <%- include('./shared/includes/setupForm', { submitPath: '/mysetups/' + carSetup.id, carSetup: carSetup, imageRequired: false }) %>
+  </main>
+<%- include('./shared/includes/footer') %> 
