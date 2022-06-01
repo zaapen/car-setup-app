@@ -20,7 +20,7 @@ const deleteCarSetup = async (event) => {
     return;
   }
 
-  buttonEle.parentElement.parentElement.parentElement.remove();
+  buttonEle.parentElement.parentElement.parentElement.parentElement.remove();
 }
 
 for (const deleteCarSetupBtnEle of deleteCarSetupBtnElements) {

@@ -1,0 +1,47 @@
+#public-setup-title {
+  font-size: 1.75rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+#all-setup-list li {
+  margin: 1rem 0;
+}
+
+.all-car-card {
+  display: flex;
+  background-color: var(--color-gray-600);
+  border-radius: var(--border-radius-small);
+  text-align: center;
+  overflow: hidden;
+}
+
+.all-car-card img {
+  width: 25rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.all-car-info {
+  width: 100%;
+}
+
+.all-car-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.all-car-info>p {
+  margin: 0.25rem 0 1rem 0;
+}
+
+.card-actions {
+  margin-bottom: 1rem;
+}
+
+.card-actions a {
+  display: inline-block;
+  margin: 0.5rem 2rem;
+}

@@ -1,15 +1,18 @@
-<div class="car-card">
+<div class="all-car-card">
   <img src="<%= userCarSetup.imageUrl %>" alt="car-image">
-  <h2><%= userCarSetup.title %></h2>
-  <p><%= userCarSetup.track %></p>
-  <div>
+  <div class="all-car-info">
+    <div class="all-car-header">
+      <h2><%= userCarSetup.title %></h2>
+      <p><i>by <%= userCarSetup.userData.fullname %></i></p>
+    </div>
+    <p>Track: <%= userCarSetup.track %></p>
     <div class="card-actions">
       <% if (locals.isAuth && locals.uid === userCarSetup.userId) { %>
         <a href="/mysetups/<%= userCarSetup.id %>" class="btn">View Detail</a>
       <% } else { %>
         <a href="/allsetups/<%= userCarSetup.id %>" class="btn">View Detail</a>
       <% } %>
-      <% if (locals.isAuth && locals.uid === userCarSetup.userId) { %>
+      <% if (locals.isAdmin) { %>
         <button class="btn btn-danger" data-carsetupid="<%= userCarSetup.id %>" data-csrf="<%= locals.csrfToken %>">Delete</button>
       <% } %>
     </div>

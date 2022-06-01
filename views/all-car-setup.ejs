@@ -1,18 +1,19 @@
 <%- include('./shared/includes/head', { pageTitle: 'All Car Setup'}) %>
-<link rel="stylesheet" href="./styles/setups.css">
+<link rel="stylesheet" href="./styles/all-setups.css">
+<script src="./scripts/car-management.js" defer></script>
 </head>
 <body>
   <%- include('./shared/includes/header') %> 
   <main>
-    <h1>All Public Setup</h1>
+    <h1 id="public-setup-title">All Public Setup</h1>
     <section>
       <% if (!userCarSetups || userCarSetups.length === 0) { %>
           <h3>There are no setups. Please create add a new setup.</h3>
         <% } else { %>
-          <ul id="car-grid">
+          <ul id="all-setup-list">
             <% for( const userCarSetup of userCarSetups ) { %>
               <li>
-                <%- include('./shared/includes/car-card', { userCarSetup: userCarSetup }) %>
+                <%- include('./shared/includes/all-car-card', { userCarSetup: userCarSetup }) %>
               </li>
             <% } %>
           </ul>
